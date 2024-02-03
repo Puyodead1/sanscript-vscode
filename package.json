@@ -1,0 +1,41 @@
+{
+    "name": "sanscript",
+    "displayName": "SanScript",
+    "description": "Adds Rockstar SanScript support",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.86.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "sanscript",
+                "aliases": [
+                    "SanScript",
+                    "sanscript"
+                ],
+                "extensions": [
+                    ".sc",
+                    ".sch"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "sanscript",
+                "path": "./snippets/sanscript.code-snippets"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "sanscript",
+                "scopeName": "source.sanscript",
+                "path": "./syntaxes/sanscript.tmLanguage.json"
+            }
+        ]
+    }
+}

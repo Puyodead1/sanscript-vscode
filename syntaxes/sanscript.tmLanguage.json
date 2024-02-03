@@ -1,0 +1,96 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "SanScript",
+    "patterns": [
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#singleQuoteStrings"
+        },
+        {
+            "include": "#numbers"
+        },
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#preprocessor"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.sanscript",
+                    "match": "(?i)\\b(IF|ELSE|ELIF|ENDIF|WHILE|ENDWHILE|REPEAT|ENDREPEAT|SCRIPT|ENDSCRIPT|RETURN|EXIT|ENDPROC|ENDFUNC|AND|OR|NOT|GE|LE|NE|LSH|RSH|FALLTHRU|FOR|FORWARD|ENDFOR|TO|STEP|TYPEDEF|PLUS_TIME|MINUS_TIME|STRLIT|USING|CATCH|THROW|CALL|TYPENAME|FUNCNAME|PROCNAME|INTLIT|FLOATLIT|NEWSYM|VAR_REF|FIELD|TRUE|FALSE|LABEL|SWITCH|ENDSWITCH|CASE|DEFAULT|BREAK|GOTO|SCOPE|ENDSCOPE|FUNC|PROC|NATIVE|GLOBALS|ENDGLOBALS|ENUM|ENDENUM|ENUMLIT|STRUCT|ENDSTRUCT|NL|PLUSPLUS|MINUSMINUS|PLUS_EQ|MINUS_EQ|TIMES_EQ|DIVIDE_EQ|COUNT_OF|ENUM_TO_INT|INT_TO_ENUM|SIZE_OF|AND_EQ|OR_EQ|XOR_EQ|NATIVE_TO_INT|INT_TO_NATIVE|HASH|DEBUGONLY|VARARGS|STRICT_ENUM|HASH_ENUM|STRICT_HASH_ENUM|ANDALSO|ORELSE|TIMESTEP|NULL|INVALID_POOLINDEX|CONST_INT|CONST_FLOAT|TWEAK_INT|TWEAK_FLOAT|BOOL|FLOAT|INT|STRING|TEXT_LABEL|TEXT_LABEL_3|TEXT_LABEL_7|TEXT_LABEL_15|TEXT_LABEL_23|TEXT_LABEL_31|TEXT_LABEL_63|VECTOR|POOLINDEX|STRINGHASH)\\b"
+                }
+            ]
+        },
+        "strings": {
+            "name": "string.quoted.double.sanscript",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.sanscript",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "singleQuoteStrings": {
+            "name": "string.quoted.double.sanscript",
+            "begin": "'",
+            "end": "'",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.sanscript",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.float.sanscript",
+                    "match": "\\b[0-9]+\\.[0-9]+\\b"
+                },
+                {
+                    "name": "constant.numeric.integer.decimal.sanscript",
+                    "match": "\\b[0-9]+\\b"
+                },
+                {
+                    "name": "constant.numeric.integer.hex.sanscript",
+                    "match": "\\b0x[0-9a-fA-F]+\\b"
+                }
+            ]
+        },
+        "comments": {
+            "patterns": [
+                {
+                    "begin": "//",
+                    "end": "\\n",
+                    "name": "comment.line.sanscript"
+                },
+                {
+                    "begin": "/\\*",
+                    "end": "\\*/",
+                    "name": "comment.block.sanscript"
+                }
+            ]
+        },
+        "preprocessor": {
+            "patterns": [
+                {
+                    "begin": "#",
+                    "end": "\\s",
+                    "name": "keyword.control.directive.sanscript"
+                }
+            ]
+        }
+    },
+    "scopeName": "source.sanscript"
+}
