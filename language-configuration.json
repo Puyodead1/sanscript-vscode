@@ -39,12 +39,12 @@
         ["\"", "\""],
         ["'", "'"]
     ],
-    // "folding": {
-    //     "markers": {
-    //         "start": "^\\s*#region\\b",
-    //         "end": "^\\s*#endregion\\b"
-    //     }
-    // },
+    "folding": {
+        "markers": {
+            "start": "^\\s*(CASE|DEFAULT|ENUM|HASH_ENUM|STRICT_ENUM|FOR|FUNC|GLOBALS|HSMACTIVATE|HSMDEACTIVATE|HSMEVENT|HSMSTATE|IF|PROC|REPEAT|SCRIPT|STRUCT|SWITCH|WHILE|ELIF|ELSE)\\b",
+            "end": "^\\s*(ELIF|ELSE|BREAK|BREAKLOOP|ENDENUM|ENDFOR|ENDFUNC|ENDGLOBALS|ENDHSMACTIVATE|ENDHSMDEACTIVATE|ENDHSMEVENT|ENDHSMSTATE|ENDIF|ENDPROC|ENDREPEAT|ENDSCRIPT|ENDSTRUCT|ENDSWITCH|ENDWHILE|FALLTHRU)\\b"
+        }
+    },
     "indentationRules": {
         "increaseIndentPattern": "^((?!(\\-\\-)).)*((\\b(IF|WHILE|REPEAT|FOR|SCRIPT|PROC|FUNC|SWITCH|SCOPE|GLOBALS|ENUM|STRUCT)\\b((?!\\b(ENDIF|ENDWHILE|UNTIL|ENDPROC|ENDFUNC|ENDSWITCH|ENDSCOPE|ENDGLOBALS|ENDENUM|ENDSTRUCT)\\b).)*)|(\\{\\s*))$",
         "decreaseIndentPattern": "^\\s*((\\b(ENDIF|ENDWHILE|UNTIL|ENDPROC|ENDFUNC|ENDSWITCH|ENDSCOPE|ENDGLOBALS|ENDENUM|ENDSTRUCT)\\b)|(\\)))"
